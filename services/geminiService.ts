@@ -1,6 +1,6 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
-import { Announcement, GroundingSource } from "../types";
+import { Announcement, GroundingSource } from "../types.ts";
 
 export class GeminiService {
   private ai: GoogleGenAI;

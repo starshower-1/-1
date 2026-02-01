@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { SUPPORT_PORTALS, CATEGORIES } from './constants';
-import { Portal, Announcement, GroundingSource } from './types';
-import { GeminiService } from './services/geminiService';
+import { SUPPORT_PORTALS, CATEGORIES } from './constants.ts';
+import { Portal, Announcement, GroundingSource } from './types.ts';
+import { GeminiService } from './services/geminiService.ts';
 
 const gemini = new GeminiService();
 
