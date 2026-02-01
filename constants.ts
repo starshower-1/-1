@@ -1,5 +1,5 @@
 
-import { Portal } from './types';
+import { Portal } from './types.ts';
 
 export const SUPPORT_PORTALS: Portal[] = [
   { id: 'jbci', name: '전북창업정보 온라인서비스', url: 'https://www.jbci.or.kr/sub/business_1.html', category: 'Local', icon: 'fa-building' },

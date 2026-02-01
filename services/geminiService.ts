@@ -6,7 +6,9 @@ export class GeminiService {
   private ai: GoogleGenAI;
 
   constructor() {
-    this.ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+    // 브라우저 환경에서 process가 없을 경우를 대비한 안전한 접근
+    const apiKey = typeof process !== 'undefined' ? process.env.API_KEY : '';
+    this.ai = new GoogleGenAI({ apiKey: apiKey || '' });
   }
 
   async fetchLatestNotices(portalName: string, portalUrl: string): Promise<{ announcements: Announcement[], sources: GroundingSource[] }> {
